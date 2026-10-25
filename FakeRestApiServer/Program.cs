@@ -98,7 +98,6 @@ namespace FakeRestApiServer
                 }
                 return HttpResponse.Json(new { message = "Invalid product id.." });
             }
-            // --- 2. DELETE ---
             else if (request.Method == "DELETE" && request.Path.StartsWith("/products/"))
             {
                 var idText = request.Path.Replace("/products/", "");
